@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Laurentius Gusti Ontoseno Panata Yudha-2172028">
+    <title>Soal 2</title>
+    <style>
+        table{
+            border-spacing: 0cm;
+        }
+        td{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.write ("<table><tr style='background-color:grey;'><td>Nama</td><td> Warna Kesukaan</td></tr>")
+        let nama=[];
+        let warna=[];
+        let a;
+        let i=0;
+        let sama=[];
+        while ( i!="STOP") {
+            a= prompt("Masukkan nama:");
+            if (a=="stop") {
+            break;
+            }
+            else {
+            let b=prompt("Masukkan warna Kesukaan (english):");
+            nama.push(a);
+            warna.push(b);
+            document.write ("<tr style='background-color:"+warna[i]+";'><td>"+nama[i]+"</td><td>"+warna[i]+"</td></tr>")
+            i++;
+        } 
+        }
+        let c=prompt("Masukkan warna yang ingin dicari:");
+        document.write ("</table>");
+        let d=0;
+        for (let j = 0; j<warna.length; j++)
+        {
+            if (c==warna[j]) {
+            d++ ;
+            sama.push(nama[j])
+        }
+        }
+        if (d==0){
+            document.write ("Tidak ada yang menyukai warna tersebut");
+        }
+        else {
+            document.write ("Ada "+d+" orang yang menyukai warna tersebut yaitu "+ sama.join(" "));
+        }
+       
+    </script>
+</body>
+</html>

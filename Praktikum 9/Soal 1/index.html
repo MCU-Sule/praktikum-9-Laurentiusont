@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Laurentius Gusti Ontoseno Panata Yudha-2172028">
+    <title>Soal 1</title>
+    <style>
+    table {
+        border-spacing:0px;
+        margin: auto;
+        
+    }
+    td {
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        background-color: rgb(119,136,153);
+        text-align: center;
+        
+    }
+
+
+
+    </style>
+</head>
+<body>
+    <script>
+        let a=prompt ("Berapa NxN bola yang ingin dibuat");
+        let b=1;
+        let d= a*a;
+        document.write ("<table>");
+        function kolom(input,isi){
+            if ((input>3) && (isi<10)){
+                    
+                    document.write ("<td>"+0+isi+"</td>");    
+                }
+                else {
+                document.write ("<td>"+isi+"</td>"); 
+            }   
+        }
+        while (b<=a) {
+            document.write ("<tr>"); 
+            
+            for (let c=1; c<=a; c++) {
+                kolom(a,d);
+                d--;
+            }
+            document.write ("</tr>"); 
+            b++;
+        }
+    
+            document.write ("</table>");
+
+    </script>
+</body>
+</html>

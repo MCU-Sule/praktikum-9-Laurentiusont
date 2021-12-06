@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Laurentius Gusti Ontoseno Panata Yudha-2172028">
+    <title>Soal 3</title>
+    <style>
+        table {
+            border-spacing: 0cm;
+            width: 100%;
+        }
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let a=prompt("minta berapa obstacle")
+        let b=0;
+        let c=0;
+        let d=[];
+        let h;
+        let e;
+        let f=0;
+        document.write("<table>")
+        while(d.length<a){
+        h=0;
+        e=Math.floor(Math.random()*25);
+        for(let j=0; j<d.length;j++){
+            if (e==d[j]){
+            h++;
+            }
+        }
+        if(h==0){
+        d.push(e);
+    }
+        }
+        while (b<5) {
+            document.write ("<tr>");
+            for (let i=0; i<5; i++){
+            for (let k=0; k<d.length;k++){
+            if (c==d[k]){
+                document.write ("<td style='background-color:brown;'>"+c+"</td>");
+                k=d.length-1;
+                f++;
+            }
+        }
+            if (f==0){
+            document.write ("<td>"+c+"</td>");
+            f++
+            }
+            f=0;
+            c++;
+        }
+            document.write ("</tr>");
+            b++;
+        }
+        document.write("</table>")
+    </script>
+</body>
+</html>
